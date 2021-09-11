@@ -52,3 +52,41 @@ The traffic must be inspected to answer the following **Network Report**
 - Results:
 
 ![](IMAGES/virus-total.png)
+
+
+## Vulnerable Windows Machines
+
+The Security Team received reports of an infected Windows host on the network. They know the following:
+
+- Machines in the network live in the range 172.164.0/24.
+
+- The domain mind-hammer.net is associated with the infected computer.
+
+- The DC for this network lives at 172.16.4.4 and is named Mind-Hammer-DC.
+
+- The network has standard gateway and broadcast addresses.
+
+
+Inspect the traffic to answer the following questions:
+
+1. Find the following information about the infected Windows machine:
+
+- Host name: 
+
+- IP address: **172.16.4.205**
+
+- MAC addrss: **00:59:07:b0:63:a4**
+
+- Filter used in Wireshark: **ip.src==172.16.4.4 and kerberos.CNameString**
+
+
+
+2. What is the username of the Windows user whose computer is infected?
+
+- Filter used in Wireshark: **ip.src==172.16.4.205 and kerberos.CNameString**
+
+
+3. What are the IP addresses used in the actual infection traffic?
+
+- Based on the Conversation statistics and the filtering by the highest amount of packets between the IP addresses- **172.16.4.205, 185.243.115.84, 166.62.11.64 are the infected traffic.**
+4. As a bonus, retrieve the desktop background of the Windows host.
