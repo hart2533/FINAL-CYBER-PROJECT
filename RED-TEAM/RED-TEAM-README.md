@@ -47,7 +47,7 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
 		- Command:
 			- '$ wpscan --url 192.168.1.110/wordpress'
 			   $ wpscan --url 192.168.1.110 --enumerate -u'
-		- [WPSCAN Screenshot](https://github.com/hart2533/FINAL-CYBER-PROJECT/blob/main/RED-TEAM/IMAGES/wpscan.png)
+		- ![](IMAGES/wpscan.png)
 
 
 	- Targeting the user 'michael'
