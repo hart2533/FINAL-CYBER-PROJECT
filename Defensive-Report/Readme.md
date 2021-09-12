@@ -17,44 +17,45 @@ The following machines were identified on the network:
 
 **Kali** 
 
-Operating System: **Debian Kali**
+- Operating System: **Debian Kali**
 
-Purpose: **Penetration Tester**
+- Purpose: **Penetration Tester**
 
-IP Address: **192.168.1.90**
+- IP Address: **192.168.1.90**
 
 
 
 **ELK**
 
-Operating System: **Ubuntu**
+- Operating System: **Ubuntu**
 
-Purpose: **The ELK (Elasticsearch and Kibana) Stack**
+- Purpose: **The ELK (Elasticsearch and Kibana) Stack**
 
-IP Address: **192.168.1.100**
+- IP Address: **192.168.1.100**
 
 
 
 **Target 1**
 
-Operating System: **Debian GNU/Linux 8**
+- Operating System: **Debian GNU/Linux 8**
 
-Purpose: **WordPress Host**
+- Purpose: **WordPress Host**
 
-IP Address: **192.168.1.110**
+- IP Address: **192.168.1.110**
 
 
 
 **Capstone**
 
-Operating System: **Ubuntu**
+- Operating System: **Ubuntu**
 
-Purpose: **Vulnerable Web Server**
+- Purpose: **Vulnerable Web Server**
 
-IP Address: **192.168.1.105
+- IP Address: **192.168.1.105
 
 
 ADD NETWORK DIAGRAM!
+
 
 
 ### Description of Targets
@@ -67,52 +68,68 @@ Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are pos
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
 
+
 **Excessive HTTP Errors**
 
-**WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes.**
+
+- **WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes.**
 
 
-Metric: **WHEN count() GROUPED OVER top 5 'http.response.status_code'**
 
-Threshold: **IS ABOVE 400**
 
-Vulnerability Mitigated: **Enumeration/ Brute Force**
+ Metric: **WHEN count() GROUPED OVER top 5 'http.response.status_code'**
 
-Reliability: **This alert is highly reliable. Measuring the error code that are 400 and above filter out the normal activity or successful responses. 400 and plus codes are client and server errors which are ones of more concern. Especially, when the error codes happen at a high rate.**
+ Threshold: **IS ABOVE 400**
+
+ Vulnerability Mitigated: **Enumeration/ Brute Force**
+
+ Reliability: **This alert is highly reliable. Measuring the error code that are 400 and above filter out the normal activity or successful responses. 400 and plus codes are client and server errors which are ones of more concern. Especially, when the error codes happen at a high rate.**
 
 ADD IMAGE
+
+
 
 
 **HTTP Request Size Monitor**
 
-**WHEN sum() of http.request.byte OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute.**
+
+- **WHEN sum() of http.request.byte OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute.**
 
 
-Metric: **WHEN sum() of http.request.byte OVER all documents**
 
-Threshold: **IS ABOVE 3500**
 
-Vulnerability Mitigated: **Code injection in HTTP requests (XSS and CRLF) or DDOS**
+ Metric: **WHEN sum() of http.request.byte OVER all documents**
 
-Reliability: **This alert could create false positives, which set the alert at medium reliability. There is a possiblity for a large number of non-malicious HTTP requests or legitimate HTTP traffic.**
+ Threshold: **IS ABOVE 3500**
+
+ Vulnerability Mitigated: **Code injection in HTTP requests (XSS and CRLF) or DDOS**
+
+ Reliability: **This alert could create false positives, which set the alert at medium reliability. There is a possiblity for a large number of non-malicious HTTP requests or legitimate HTTP traffic.**
 
 ADD IMAGE
+
+
 
 
 **CPU Usage Monitor**
 
-**WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes**
+
+- **WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes**
 
 
-Metric: **WHEN max() OF system.process.cpu.total.pct OVER all documents**
 
-Threshold: **IS ABOVE 0.5**
 
-Vulnerability Mitigated: **Malicious software, programs (malware or viruses) running taking up resources.**
+ Metric: **WHEN max() OF system.process.cpu.total.pct OVER all documents**
 
-Reliability: **This alert is highly reliable. Even if there isn't malicious programs running, this alert can still help determine where the CPU can improve usage.**
+ Threshold: **IS ABOVE 0.5**
+
+ Vulnerability Mitigated: **Malicious software, programs (malware or viruses) running taking up resources.**
+
+ Reliability: **This alert is highly reliable. Even if there isn't malicious programs running, this alert can still help determine where the CPU can improve usage.**
 
 ADD IMAGE
+
+
 
 
 
@@ -154,6 +171,7 @@ Patch: **WordPress Hardening**
 
     - **/wp-login.php**
 
+
 Why It Works:
 
 - **Regular updates to WordPress, the PHP version and plugin is a simple way to implement patches or fixes to the vulnerabilites/exploits.**
@@ -188,6 +206,7 @@ Patch: **Code Injection/ DDOS Hardening**
 - **Implementation of input validation on forms.**
 
 
+
 Why It Works: 
 
 - **If an HTTP request length and over size limit of the request, a 404 error will occur.**
@@ -195,6 +214,7 @@ Why It Works:
     - **This will help reject the requests that are too large.**
 
 - **Input validation could help protect against attacks who attempt to send the server via the website or application accross a HTTP request.**
+
 
 
 
