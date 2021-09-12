@@ -79,6 +79,8 @@ Inspect the traffic to answer the following questions:
 
 - Filter used in Wireshark: **ip.src==172.16.4.4 and kerberos.CNameString**
 
+![](IMAGES/top-ip-addresses.png)
+
 
 
 2. What is the username of the Windows user whose computer is infected?
@@ -89,4 +91,33 @@ Inspect the traffic to answer the following questions:
 3. What are the IP addresses used in the actual infection traffic?
 
 - Based on the Conversation statistics and the filtering by the highest amount of packets between the IP addresses- **172.16.4.205, 185.243.115.84, 166.62.11.64 are the infected traffic.**
+
+
 4. As a bonus, retrieve the desktop background of the Windows host.
+
+
+## Illegal Downloads
+
+IT was informed that some users are torrenting on the network. The Security team does not forbid the use of torrents for legitmate purposes, such as downloading operating systems. However, they have a strict policy against copyright infringement. 
+
+IT shared the following about the torrent activity:
+
+- The machine using torrents live in the range 10.0.0.0/24 and are clients of AD domain.
+
+- The DC of this domain lives at 10.0.0.2 and is named DogOfTheYear-DC.
+
+- The DC is associated with the domain dogoftheyear.net.
+
+
+
+The task is to isolate the torrent traffic and answer the following questions for the Network Report:
+
+1. Find the following information about the machine with the IP address of 10.0.0.201:
+
+- MAC address: 
+
+- Windows username:
+
+- OS version: 
+
+2. Which torrent file did the user download?

@@ -31,3 +31,12 @@ If the alerts are working, you will then monitor live traffic on the wire to det
   - Submit an offensive red team analysis
   - Submit a defensive blue team analysis
   - Submit a network forensic analysis.
+
+
+## Reports:
+
+1. [Defensive Report] -->
+
+2. [Network Report] --> (Defensive-and-Network-Team\Readme.md)
+
+3. [Offensive Report] --> (Offensive-Team\Readme.md)
