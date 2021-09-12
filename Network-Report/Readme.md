@@ -96,6 +96,8 @@ Inspect the traffic to answer the following questions:
 
 4. As a bonus, retrieve the desktop background of the Windows host.
 
+![](IMAGES/host-background.png)
+
 
 ## Illegal Downloads
 
@@ -115,10 +117,18 @@ The task is to isolate the torrent traffic and answer the following questions fo
 
 1. Find the following information about the machine with the IP address of 10.0.0.201:
 
-- MAC address: 
+- MAC address: **00:16:17:18:66:c8**
 
-- Windows username:
+- Windows username: **elmer.blanco**
 
-- OS version: 
+- OS version: **BLANCO-DESKTOP**
+
+![](IMAGES/torrent-traffic.png)
 
 2. Which torrent file did the user download?
+
+- The torrent downloaded **Betty_Boop_Rythm_on_the_Reservation.avi.torrent.
+
+- Filter used in Wireshark: **ip.addr==10.0.0.201 and http.request.method==GET**
+
+![](IMAGES/torrent-file-download.png)
