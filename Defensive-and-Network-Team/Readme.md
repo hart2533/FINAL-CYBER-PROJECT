@@ -71,7 +71,7 @@ Inspect the traffic to answer the following questions:
 
 1. Find the following information about the infected Windows machine:
 
-- Host name: 
+- Host name: **ROTTERDAM-PC**
 
 - IP address: **172.16.4.205**
 
@@ -79,8 +79,7 @@ Inspect the traffic to answer the following questions:
 
 - Filter used in Wireshark: **ip.src==172.16.4.4 and kerberos.CNameString**
 
-![](IMAGES/top-ip-addresses.png)
-
+![](IMAGES/host-name.png) 
 
 
 2. What is the username of the Windows user whose computer is infected?
@@ -91,6 +90,8 @@ Inspect the traffic to answer the following questions:
 3. What are the IP addresses used in the actual infection traffic?
 
 - Based on the Conversation statistics and the filtering by the highest amount of packets between the IP addresses- **172.16.4.205, 185.243.115.84, 166.62.11.64 are the infected traffic.**
+
+![](IMAGES/top-ip-addresses.png)
 
 
 4. As a bonus, retrieve the desktop background of the Windows host.
