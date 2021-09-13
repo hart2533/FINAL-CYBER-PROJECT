@@ -12,20 +12,20 @@ The traffic must be inspected to answer the following **Network Report**
 
 1. What is the domain name of the users' custom site?
 
-- The Domain Name: **Frank-n-Ted-DC.frand-n-ted.com.**
+    - The Domain Name: **Frank-n-Ted-DC.frand-n-ted.com.**
 
-- Filter used in Wireshark: **ip.addr==10.6.12.0/24**
+    - Filter used in Wireshark: **ip.addr==10.6.12.0/24**
 
-- Results:
+    - Results:
 
 ![](IMAGES/pcap-ip-domain-find-2.png)
 
 
 2. What is the IP address of the Domain Controller (DC) of the AD network?
 
-- IP address is **10.6.12.12 (Frank-n-Ted-DC.frank-n-ted.com)**
+    - IP address is **10.6.12.12 (Frank-n-Ted-DC.frank-n-ted.com)**
 
-- Filter used in Wireshark: **ip.addr==10.6.12.0/24**
+    - Filter used in Wireshark: **ip.addr==10.6.12.0/24**
 
 - Results:
 
@@ -33,23 +33,24 @@ The traffic must be inspected to answer the following **Network Report**
 
 3. What is the name of the malware downloaded to the 10.6.12.203 machine?
 
-- Malware file: **june11.dll**
+    - Malware file: **june11.dll**
 
-- Results:
+    - Results:
 
 ![](IMAGES/pcap-malware.png)
 
 
-    - Once the file is found, the file was exported to the Kali machine.
+- Once the file is found, the file was exported to the Kali machine.
 
-    - Filter used in Wireshark: **ip.addr==10.6.12.203 and http.request.method==GET**
+- Filter used in Wireshark: **ip.addr==10.6.12.203 and http.request.method==GET**
         
+
 
 4. Upload the file to VirusTotal.com 
 
-- This type of malware is classified as a **Trojan**
+    - This type of malware is classified as a **Trojan**
 
-- Results:
+    - Results:
 
 ![](IMAGES/virus-total.png)
 
@@ -67,29 +68,30 @@ The Security Team received reports of an infected Windows host on the network. T
 - The network has standard gateway and broadcast addresses.
 
 
+
 Inspect the traffic to answer the following questions:
 
 1. Find the following information about the infected Windows machine:
 
-- Host name: **ROTTERDAM-PC**
+    - Host name: **ROTTERDAM-PC**
 
-- IP address: **172.16.4.205**
+    - IP address: **172.16.4.205**
 
-- MAC addrss: **00:59:07:b0:63:a4**
+    - MAC addrss: **00:59:07:b0:63:a4**
 
-- Filter used in Wireshark: **ip.src==172.16.4.4 and kerberos.CNameString**
+    - Filter used in Wireshark: **ip.src==172.16.4.4 and kerberos.CNameString**
 
 ![](IMAGES/host-name.png) 
 
 
 2. What is the username of the Windows user whose computer is infected?
 
-- Filter used in Wireshark: **ip.src==172.16.4.205 and kerberos.CNameString**
+    - Filter used in Wireshark: **ip.src==172.16.4.205 and kerberos.CNameString**
 
 
 3. What are the IP addresses used in the actual infection traffic?
 
-- Based on the Conversation statistics and the filtering by the highest amount of packets between the IP addresses- **172.16.4.205, 185.243.115.84, 166.62.11.64 are the infected traffic.**
+    - Based on the Conversation statistics and the filtering by the highest amount of packets between the IP addresses- **172.16.4.205, 185.243.115.84, 166.62.11.64 are the infected traffic.**
 
 ![](IMAGES/top-ip-addresses.png)
 
@@ -117,18 +119,18 @@ The task is to isolate the torrent traffic and answer the following questions fo
 
 1. Find the following information about the machine with the IP address of 10.0.0.201:
 
-- MAC address: **00:16:17:18:66:c8**
+    - MAC address: **00:16:17:18:66:c8**
 
-- Windows username: **elmer.blanco**
+    - Windows username: **elmer.blanco**
 
-- OS version: **BLANCO-DESKTOP**
+    - OS version: **BLANCO-DESKTOP**
 
 ![](IMAGES/torrent-traffic-file.png)
 
 2. Which torrent file did the user download?
 
-- The torrent downloaded **Betty_Boop_Rythm_on_the_Reservation.avi.torrent.
+    - The torrent downloaded **Betty_Boop_Rythm_on_the_Reservation.avi.torrent.
 
-- Filter used in Wireshark: **ip.addr==10.0.0.201 and http.request.method==GET**
+    - Filter used in Wireshark: **ip.addr==10.0.0.201 and http.request.method==GET**
 
 ![](IMAGES/torrent-file-download.png)

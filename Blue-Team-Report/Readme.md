@@ -50,7 +50,7 @@ The following machines were identified on the network:
 
 - Purpose: **Vulnerable Web Server**
 
-- IP Address: **192.168.1.105
+- IP Address: **192.168.1.105**
 
 
 ![](IMAGES/final-network-setup.png)
