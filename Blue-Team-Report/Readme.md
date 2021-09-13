@@ -145,77 +145,77 @@ The logs and alerts generated during the assessment suggest that this network is
 **Excessive HTTP Errors**
 
 
-Patch: **WordPress Hardening**
+**Patch:** WordPress Hardening
 
  
 
-- **Regular updates should be implemented.**
+- Regular updates should be implemented.
 
-    - **WordPress Core**
+    - WordPress Core
 
-    - **PHP versions**
+    - PHP versions
 
-    - **Plugins**
+    - Plugins
 
-- **Installing security plugin(s)**
+- Installing security plugin(s)
 
-    - **For example, Wordfence(added security funtionality)**
+    - For example, Wordfence(added security funtionality)
 
-- **Disabling unused WordPress features and settings, like the following:**
+- Disabling unused WordPress features and settings, like the following:
 
-    - **WordPress XML-RPC (on by default)**
+    - WordPress XML-RPC (on by default)
 
-- **Blocking request to /?author= by configuring web server settings.**
+- Blocking request to /?author= by configuring web server settings.
 
-- **Remove the WordPress logins from being publicly accessible, specifically:**
+- Remove the WordPress logins from being publicly accessible, specifically:
 
-    - **/wp-admin**
+    - /wp-admin
 
-    - **/wp-login.php**
+    - /wp-login.php
 
 
-Why It Works:
+**Why it Works**
 
-- **Regular updates to WordPress, the PHP version and plugin is a simple way to implement patches or fixes to the vulnerabilites/exploits.**
+- Regular updates to WordPress, the PHP version and plugin is a simple way to implement patches or fixes to the vulnerabilites/exploits.
 
-- **Depending on the WordPress Security Plugins, features like this are added:**
+- Depending on the WordPress Security Plugins, features like this are added:
 
-    - **Malware Scans**
+    - Malware Scans
 
-    - **Firewall**
+    - Firewall
 
-- **REST API is used by WPScan to enumerate users. Disabiling this will help mitigate WPScan or enumeration in general.**
+- REST API is used by WPScan to enumerate users. Disabiling this will help mitigate WPScan or enumeration in general.
 
-- **XML-RPC uses HTTP as a method of data transportation.**
+- XML-RPC uses HTTP as a method of data transportation.
 
-- **Removeral of public access to WordPress logins will help reduce the attacks.**
+- Removeral of public access to WordPress logins will help reduce the attacks.
 
 
 
 **HTTP Request Size Monitor**
 
 
-Patch: **Code Injection/ DDOS Hardening**
+**Patch:** Code Injection/ DDOS Hardening
 
-- **Implenmentation of HTTP Requests Limit on the web server.**
+- Implenmentation of HTTP Requests Limit on the web server.
 
-    - **Limits can include:**
+    - Limits can include:
 
-        - **Maximum URL length**
+        - Maximum URL length
 
-        - **Maximum size of requests**
+        - Maximum size of requests
 
-- **Implementation of input validation on forms.**
+- Implementation of input validation on forms.
 
 
 
-Why It Works: 
+**Why It Works:**
 
-- **If an HTTP request length and over size limit of the request, a 404 error will occur.**
+- If an HTTP request length and over size limit of the request, a 404 error will occur.
 
-    - **This will help reject the requests that are too large.**
+    - This will help reject the requests that are too large.
 
-- **Input validation could help protect against attacks who attempt to send the server via the website or application accross a HTTP request.**
+- Input validation could help protect against attacks who attempt to send the server via the website or application accross a HTTP request.
 
 
 
@@ -223,16 +223,15 @@ Why It Works:
 **CPU Usage Monitor**
 
 
-Patch: **Virus or Malware Hardening**
+**Patch:** Virus or Malware Hardening**
 
-- **Add or update current antivirus protection**
+- Add or update current antivirus protection
 
-- **Implenment and configure Host Based Intrusion Detection System (HIDS)**
+- Implenment and configure Host Based Intrusion Detection System (HIDS)
 
 
-Why It Works: 
+**Why It Works:**
 
-- **Antivirus protection specializes in removeral, detection and overall prevention of malicious threats against the computers.**
+- Antivirus protection specializes in removeral, detection and overall prevention of malicious threats against the computers.
 
-- **HIDS monitors and analyzes internals of the computing system.**
-
+- HIDS monitors and analyzes internals of the computing system.
