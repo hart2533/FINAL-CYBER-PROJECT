@@ -14,7 +14,6 @@
 The following machines were identified on the network:
 
 
-
 **Kali** 
 
 - Operating System: **Debian Kali**
@@ -63,6 +62,7 @@ ADD NETWORK DIAGRAM!
 The target of this attack was: Target 1 (192.168.1.110).
 Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
 
+
 ### Monitoring the Targets
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
@@ -76,16 +76,16 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 
 
+    - Metric: **WHEN count() GROUPED OVER top 5 'http.response.status_code'**
 
- Metric: **WHEN count() GROUPED OVER top 5 'http.response.status_code'**
+    - Threshold: **IS ABOVE 400**
 
- Threshold: **IS ABOVE 400**
+    - Vulnerability Mitigated: **Enumeration/ Brute Force**
 
- Vulnerability Mitigated: **Enumeration/ Brute Force**
+    - Reliability: **This alert is highly reliable. Measuring the error code that are 400 and above filter out the normal activity or successful responses. 400 and plus codes are client and server errors which are ones of more concern. Especially, when the error codes happen at a high rate.**
 
- Reliability: **This alert is highly reliable. Measuring the error code that are 400 and above filter out the normal activity or successful responses. 400 and plus codes are client and server errors which are ones of more concern. Especially, when the error codes happen at a high rate.**
 
-ADD IMAGE
+![](IMAGES/Excessive-HTTP-Errors.png)
 
 
 
@@ -98,15 +98,16 @@ ADD IMAGE
 
 
 
- Metric: **WHEN sum() of http.request.byte OVER all documents**
+ - Metric: **WHEN sum() of http.request.byte OVER all documents**
 
- Threshold: **IS ABOVE 3500**
+ - Threshold: **IS ABOVE 3500**
 
- Vulnerability Mitigated: **Code injection in HTTP requests (XSS and CRLF) or DDOS**
+ - Vulnerability Mitigated: **Code injection in HTTP requests (XSS and CRLF) or DDOS**
 
- Reliability: **This alert could create false positives, which set the alert at medium reliability. There is a possiblity for a large number of non-malicious HTTP requests or legitimate HTTP traffic.**
+ - Reliability: **This alert could create false positives, which set the alert at medium reliability. There is a possiblity for a large number of non-malicious HTTP requests or legitimate HTTP traffic.**
 
-ADD IMAGE
+
+![](IMAGES/HTTP-request-size-monitor.png)
 
 
 
@@ -119,15 +120,16 @@ ADD IMAGE
 
 
 
- Metric: **WHEN max() OF system.process.cpu.total.pct OVER all documents**
+ - Metric: **WHEN max() OF system.process.cpu.total.pct OVER all documents**
 
- Threshold: **IS ABOVE 0.5**
+ - Threshold: **IS ABOVE 0.5**
 
- Vulnerability Mitigated: **Malicious software, programs (malware or viruses) running taking up resources.**
+ - Vulnerability Mitigated: **Malicious software, programs (malware or viruses) running taking up resources.**
 
- Reliability: **This alert is highly reliable. Even if there isn't malicious programs running, this alert can still help determine where the CPU can improve usage.**
+ - Reliability: **This alert is highly reliable. Even if there isn't malicious programs running, this alert can still help determine where the CPU can improve usage.**
 
-ADD IMAGE
+
+![](IMAGES/CPU-usage-monitor.png)
 
 
 

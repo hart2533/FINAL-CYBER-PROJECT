@@ -96,7 +96,7 @@ Inspect the traffic to answer the following questions:
 
 4. As a bonus, retrieve the desktop background of the Windows host.
 
-![](IMAGES/host-background.png)
+![](IMAGES/host-wallpaper.png)
 
 
 ## Illegal Downloads
@@ -123,7 +123,7 @@ The task is to isolate the torrent traffic and answer the following questions fo
 
 - OS version: **BLANCO-DESKTOP**
 
-![](IMAGES/torrent-traffic.png)
+![](IMAGES/torrent-traffic-file.png)
 
 2. Which torrent file did the user download?
 
