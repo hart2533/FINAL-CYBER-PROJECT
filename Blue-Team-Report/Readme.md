@@ -98,13 +98,13 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 
 
- - Metric: **WHEN sum() of http.request.byte OVER all documents**
+    - Metric: **WHEN sum() of http.request.byte OVER all documents**
 
- - Threshold: **IS ABOVE 3500**
+    - Threshold: **IS ABOVE 3500**
 
- - Vulnerability Mitigated: **Code injection in HTTP requests (XSS and CRLF) or DDOS**
+    - Vulnerability Mitigated: **Code injection in HTTP requests (XSS and CRLF) or DDOS**
 
- - Reliability: **This alert could create false positives, which set the alert at medium reliability. There is a possiblity for a large number of non-malicious HTTP requests or legitimate HTTP traffic.**
+    - Reliability: **This alert could create false positives, which set the alert at medium reliability. There is a possiblity for a large number of non-malicious HTTP requests or legitimate HTTP traffic.**
 
 
 ![](IMAGES/HTTP-request-sizes-monitor.png)
@@ -120,13 +120,13 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 
 
- - Metric: **WHEN max() OF system.process.cpu.total.pct OVER all documents**
+    - Metric: **WHEN max() OF system.process.cpu.total.pct OVER all documents**
 
- - Threshold: **IS ABOVE 0.5**
+    - Threshold: **IS ABOVE 0.5**
 
- - Vulnerability Mitigated: **Malicious software, programs (malware or viruses) running taking up resources.**
+    - Vulnerability Mitigated: **Malicious software, programs (malware or viruses) running taking up resources.**
 
- - Reliability: **This alert is highly reliable. Even if there isn't malicious programs running, this alert can still help determine where the CPU can improve usage.**
+    - Reliability: **This alert is highly reliable. Even if there isn't malicious programs running, this alert can still help determine where the CPU can improve usage.**
 
 
 ![](IMAGES/CPU-usage-monitor.png)
