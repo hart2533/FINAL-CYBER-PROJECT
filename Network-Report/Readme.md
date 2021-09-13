@@ -18,7 +18,7 @@ The traffic must be inspected to answer the following **Network Report**
 
 - Results:
 
-![](IMAGES/pcap-ip-domain.png)
+![](IMAGES/pcap-ip-domain-find-2.png)
 
 
 2. What is the IP address of the Domain Controller (DC) of the AD network?
@@ -29,7 +29,7 @@ The traffic must be inspected to answer the following **Network Report**
 
 - Results:
 
-![](IMAGES/pcap-ip-domain.png)
+![](IMAGES/pcap-ip-domain-find.png)
 
 3. What is the name of the malware downloaded to the 10.6.12.203 machine?
 
