@@ -85,7 +85,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
     - Reliability: **This alert is highly reliable. Measuring the error code that are 400 and above filter out the normal activity or successful responses. 400 and plus codes are client and server errors which are ones of more concern. Especially, when the error codes happen at a high rate.**
 
 
-![](IMAGES/Excessive-HTTP-Errors.png)
+![](IMAGES/Excessive-HTTP-Error.png)
 
 
 
@@ -107,7 +107,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
  - Reliability: **This alert could create false positives, which set the alert at medium reliability. There is a possiblity for a large number of non-malicious HTTP requests or legitimate HTTP traffic.**
 
 
-![](IMAGES/HTTP-request-size-monitor.png)
+![](IMAGES/HTTP-request-sizes-monitor.png)
 
 
 
