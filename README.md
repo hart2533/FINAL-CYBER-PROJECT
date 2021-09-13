@@ -33,10 +33,3 @@ If the alerts are working, you will then monitor live traffic on the wire to det
   - Submit a network forensic analysis.
 
 
-## Reports:
-
-1. [Defensive Report] -->
-
-2. [Network Report] --> (Defensive-and-Network-Team\Readme.md)
-
-3. [Offensive Report] --> (Offensive-Team\Readme.md)
