@@ -78,15 +78,15 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
 
 Exploit Used
 
-	- The same exploit used to gain flag1.
-	- Capturing Flag2: While in SSH in as Michael, Flag2 was also gained.
-		- Once again, browsing through the files and directories, Flag2 can be found in /var/www next to the html folder where Flag1 was found. 
-		- Commands:
-			- ssh michael@192.168.1.110
-			- password: michael
-			- cd /var/www
-			- ls -l
-			- cat flag2.txt
+- The same exploit used to gain flag1.
+- Capturing Flag2: While in SSH in as Michael, Flag2 was also gained.
+	- Once again, browsing through the files and directories, Flag2 can be found in /var/www next to the html folder where Flag1 was found. 
+	- Commands:
+		- ssh michael@192.168.1.110
+		- password: michael
+		- cd /var/www
+		- ls -l
+		- cat flag2.txt
 		
 ![](IMAGES/flag2.png)
 
